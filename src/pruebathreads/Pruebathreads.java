@@ -24,6 +24,7 @@ public class Pruebathreads {
         int capacidadPlato = 10;
         System.out.println("Introduce el número de Cocineros que trabajan:");
         int nproducers = leerValorEntero();
+        
         for (int i = 0; i < nproducers; i++) {
             Thread tProducer= new Thread(new Producer(burritos, capacidadPlato), "Cocinero"+(i+1)); 
             tProducer.start();
@@ -32,6 +33,7 @@ public class Pruebathreads {
         tConsumer.start();
         
     }
+    
     public static int leerValorEntero() {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();

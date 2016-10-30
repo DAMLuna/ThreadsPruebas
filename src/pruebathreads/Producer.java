@@ -15,7 +15,7 @@ public class Producer implements Runnable {
 
     private final List<Integer> burritos;
     private final int capacidadPlato;
-    //Estara?
+    
     public Producer(List<Integer> sharedQueue, int size) {
         this.burritos = sharedQueue;
         this.capacidadPlato = size;
